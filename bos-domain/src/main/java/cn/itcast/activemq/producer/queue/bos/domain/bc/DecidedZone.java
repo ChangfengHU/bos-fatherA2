@@ -17,7 +17,7 @@ import java.util.Set;
 )
 public class DecidedZone  implements java.io.Serializable {
 
-        //local master
+        //local myslef01
      private String id;
      private Staff staff;
      private String name;
