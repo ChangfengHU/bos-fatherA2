@@ -1,7 +1,7 @@
 package cn.itcast.bos.action.user;
 
 
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Staff;
+import cn.itcast.bos.domain.bc.Staff;
 import cn.itcast.bos.action.base.BaseAction;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;

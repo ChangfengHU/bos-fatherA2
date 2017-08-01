@@ -1,7 +1,7 @@
 package cn.itcast.bos.action.user;
 
 import cn.itcast.bos.action.base.BaseAction;
-import cn.itcast.activemq.producer.queue.bos.domain.user.User;
+import cn.itcast.bos.domain.user.User;
 import cn.itcast.activemq.producer.queue.bos.utils.RandStringUtils;
 import cnm.QueueSender;
 import org.apache.commons.lang3.StringUtils;

@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import cn.itcast.activemq.producer.queue.bos.domain.user.User;
+import cn.itcast.bos.domain.user.User;
 
 public interface UserDao extends JpaRepository<User, Integer> {
     // 1: JPQL 语句 直接书写在方法上 使用注解完成

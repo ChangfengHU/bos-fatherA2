@@ -2,7 +2,7 @@ package cn.itcast.bos.action.user;
 
 
 import cn.itcast.bos.action.base.BaseAction;
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Region;
+import cn.itcast.bos.domain.bc.Region;
 import cn.itcast.bos.dao.bc.PinYin4jUtils;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;

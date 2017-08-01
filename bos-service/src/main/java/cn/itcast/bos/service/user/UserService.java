@@ -1,6 +1,6 @@
 package cn.itcast.bos.service.user;
 
-import cn.itcast.activemq.producer.queue.bos.domain.user.User;
+import cn.itcast.bos.domain.user.User;
 
 import java.util.List;
 

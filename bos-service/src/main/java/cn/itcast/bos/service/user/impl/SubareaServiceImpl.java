@@ -1,6 +1,6 @@
 package cn.itcast.bos.service.user.impl;
 
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Subarea;
+import cn.itcast.bos.domain.bc.Subarea;
 import cn.itcast.bos.dao.bc.SubareaDao;
 import cn.itcast.bos.service.user.SubareaService;
 import org.hibernate.Hibernate;
@@ -54,6 +54,14 @@ public class SubareaServiceImpl implements SubareaService {
         return subareaDao.noassociation();
     }
 
+    @Override
+    public List<Subarea> Query(String id) {
+        List<Subarea> all = subareaDao.findBydeid(id);
+        for (Subarea subarea : all) {
+            Hibernate.initialize(subarea.getRegion());
+        }
+        return all;
+    }
 
 
 }

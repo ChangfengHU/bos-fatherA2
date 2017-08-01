@@ -1,6 +1,6 @@
 package cn.itcast.bos.test;
 
-import cn.itcast.activemq.producer.queue.bos.domain.user.User;
+import cn.itcast.bos.domain.user.User;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SimplePropertyPreFilter;
 import com.opensymphony.xwork2.util.TextParseUtil;

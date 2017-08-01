@@ -1,6 +1,6 @@
 package cn.itcast.bos.dao.bc;
 
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Staff;
+import cn.itcast.bos.domain.bc.Staff;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;

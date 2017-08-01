@@ -1,4 +1,4 @@
-package cn.itcast.activemq.producer.queue.bos.domain.bc;
+package cn.itcast.bos.domain.bc;
 // Generated 2017-7-18 12:28:45 by Hibernate Tools 3.2.2.GA
 
 import com.alibaba.fastjson.annotation.JSONField;

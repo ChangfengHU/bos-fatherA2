@@ -1,4 +1,4 @@
-package cn.itcast.activemq.producer.queue.bos.domain.user;
+package cn.itcast.bos.domain.user;
 
 // Generated 2017-7-14 16:22:25 by Hibernate Tools 3.2.2.GA
 

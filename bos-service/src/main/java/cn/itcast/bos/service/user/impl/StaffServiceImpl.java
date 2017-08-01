@@ -1,6 +1,6 @@
 package cn.itcast.bos.service.user.impl;
 
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Staff;
+import cn.itcast.bos.domain.bc.Staff;
 import cn.itcast.bos.dao.bc.StaffDao;
 import cn.itcast.bos.service.user.StaffService;
 import org.apache.commons.lang3.StringUtils;

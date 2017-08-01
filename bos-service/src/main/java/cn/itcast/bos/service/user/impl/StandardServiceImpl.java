@@ -1,6 +1,6 @@
 package cn.itcast.bos.service.user.impl;
 
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Standard;
+import cn.itcast.bos.domain.bc.Standard;
 import cn.itcast.bos.dao.bc.StandardDao;
 import cn.itcast.bos.service.user.StandardService;
 import org.springframework.beans.factory.annotation.Autowired;

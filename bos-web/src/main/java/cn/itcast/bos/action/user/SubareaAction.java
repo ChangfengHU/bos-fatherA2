@@ -1,8 +1,8 @@
 package cn.itcast.bos.action.user;
 
-import cn.itcast.activemq.producer.queue.bos.domain.bc.DecidedZone;
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Region;
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Subarea;
+import cn.itcast.bos.domain.bc.DecidedZone;
+import cn.itcast.bos.domain.bc.Region;
+import cn.itcast.bos.domain.bc.Subarea;
 import cn.itcast.activemq.producer.queue.bos.utils.DownLoadUtils;
 import cn.itcast.bos.action.base.BaseAction;
 import org.apache.commons.lang3.StringUtils;
@@ -64,6 +64,15 @@ public class SubareaAction extends BaseAction<Subarea> {
         Page<Subarea> pageQuery = facadeService.getSubareaService().pageQuery(getPageRequest(),spec);
         setPageData(pageQuery);
         return "pageQuery";
+    }
+    @Action(value = "subareaAction_queryAll", results = {@Result(name = "queryAll", type = "fastjson")})
+    public String queryAll() {
+        System.out.println("进subareaAction_pageQuery");
+        // 条件封装 Specification接口实现类中
+        // 添加 又是修改
+        List<Subarea> list= facadeService.getSubareaService().Query(getParameter("deid"));
+        push(list);
+        return "queryAll";
     }
     private Specification<Subarea> getSpecification() {
         // 1: Sepcification接口 封装条件

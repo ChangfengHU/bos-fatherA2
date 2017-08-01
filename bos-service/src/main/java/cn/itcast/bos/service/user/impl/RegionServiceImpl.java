@@ -1,6 +1,6 @@
 package cn.itcast.bos.service.user.impl;
 
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Region;
+import cn.itcast.bos.domain.bc.Region;
 import cn.itcast.bos.dao.bc.RegionDao;
 import cn.itcast.bos.service.user.RegionService;
 import org.apache.commons.lang3.StringUtils;

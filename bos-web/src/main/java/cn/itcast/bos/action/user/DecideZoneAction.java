@@ -1,8 +1,9 @@
 package cn.itcast.bos.action.user;
 
-import cn.itcast.activemq.producer.queue.bos.domain.bc.DecidedZone;
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Staff;
 import cn.itcast.bos.action.base.BaseAction;
+import cn.itcast.bos.domain.bc.DecidedZone;
+import cn.itcast.bos.domain.bc.Staff;
+import cn.itcast.mavencrm.domain.Customer;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
@@ -37,6 +38,37 @@ public class DecideZoneAction extends BaseAction<DecidedZone> {
             e.printStackTrace();
         }
         return "save";
+    }
+
+    @Action(value = "decidedZoneAction_assigncustomerstodecidedzone",
+            results = { @Result(name = "assigncustomerstodecidedzone", location = "/WEB-INF/pages/base/decidedzone.jsp") })
+    public String assigncustomerstodecidedzone() {
+        // 获取定区id 和 选中右边所有客户ids
+        String[] customerIds = getRequest().getParameterValues("customerIds");
+        facadeService.getDecidedZoneService().assigncustomerstodecidedzone(model.getId(), customerIds);
+        return "assigncustomerstodecidedzone";
+    }
+
+
+
+    @Action(value = "decidedZoneAction_findnoassociationcustomers", results = { @Result(name = "findnoassociationcustomers", type = "fastjson", params = { "includeProperties", "id,name" }) })
+    public String findnoassociationcustomers() {
+        List<Customer> customers = facadeService.getDecidedZoneService().findnoassociationcustomers();
+        push(customers);
+        return "findnoassociationcustomers";
+    }
+
+    @Action(value = "decidedZoneAction_findassociationcustomers", results = { @Result(name = "findassociationcustomers", type = "fastjson", params = { "includeProperties", "id,name" }) })
+    public String findassociationcustomers() {
+        List<Customer> customers = facadeService.getDecidedZoneService().findassociationcustomers(model.getId());
+        push(customers);
+        return "findassociationcustomers";
+    }
+    @Action(value = "decidedZoneAction_findassociationcustomers1", results = { @Result(name = "findassociationcustomers1", type = "fastjson") })
+    public String findassociationcustomers1() {
+        List<Customer> customers = facadeService.getDecidedZoneService().findassociationcustomers(getParameter("id"));
+        push(customers);
+        return "findassociationcustomers1";
     }
 
     @Action(value = "decidedzoneAction_pageQuery")

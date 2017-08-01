@@ -1,6 +1,6 @@
 package cn.itcast.bos.service.user;
 
-import cn.itcast.activemq.producer.queue.bos.domain.bc.Staff;
+import cn.itcast.bos.domain.bc.Staff;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
